@@ -1,0 +1,29 @@
+{
+  "manifest_version": 3,
+  "name": "YouTube Smart Assistant",
+  "version": "1.0",
+  "description": "Track watched videos and restore dislike counts on YouTube.",
+  "permissions": [
+    "storage"
+  ],
+  "host_permissions": [
+    "https://*.youtube.com/*",
+    "https://returnyoutubedislikeapi.com/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["https://*.youtube.com/*"],
+      "js": ["content.js"],
+      "css": ["style.css"]
+    }
+  ],
+  "icons": {
+    "16": "icon.svg",
+    "48": "icon.svg",
+    "128": "icon.svg"
+  },
+  "action": {
+    "default_icon": "icon.svg",
+    "default_title": "YouTube Smart Assistant"
+  }
+}
